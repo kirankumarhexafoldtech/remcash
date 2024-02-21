@@ -21,7 +21,7 @@
         <div class="register-bar">
           <div :class="barDetails.register ?  'register-bar-point register-bar-point-active' : current == 'register' ? 'register-bar-point register-bar-point-blink' : 'register-bar-point'"></div>
           <div :class="barDetails.otp ?  'register-bar-point register-bar-point-active' : current == 'otp' ? 'register-bar-point register-bar-point-blink' : 'register-bar-point'"></div>
-          <div class="register-bar-point"></div>
+          <div class="register-bar-point" :class="barDetails.identityConfirmation ?  'register-bar-point register-bar-point-active' : current == 'identityConfirmation' ? 'register-bar-point register-bar-point-blink' : 'register-bar-point'"></div>
           <div class="register-bar-point"></div>
           <div class="register-bar-point"></div>
         </div>
@@ -29,8 +29,9 @@
           <img :src="RamecashLogo" alt="" />
           <p>Remcash</p>
         </div>
-        <Register @registerDetails="handleRegistration" v-if="current == 'register'"/>
-        <OtpVerification v-if="current == 'otp'"/>
+        <Register @registerDetails="handleRegistration" v-if="current == 'register'" :data="registrationProcess.register"/>
+        <OtpVerification v-if="current == 'otp'" @goback="handleGoBack" @otpverified="handleOtpVerified"/>
+        <IdentityConfirmation v-if="current == 'identity'"/>
       </div>
       <div class="main_auth_background">
         <img :src="BackgroundImage" alt="" />
@@ -47,7 +48,8 @@ import BackgroundImage from "@/assets/svg/bg_glob.svg";
 import RamecashLogo from "@/assets/svg/logo01.svg";
 import Register from "@/components/registration/Register.vue";
 import OtpVerification from "@/components/registration/OtpVerification.vue";
-Register
+import IdentityConfirmation from "@/components/registration/IdentityConfirmation.vue";
+
 const leftScrollContent = reactive([
   {
     img: Wallet,
@@ -99,6 +101,7 @@ const registrationProcess = reactive({
 const barDetails = reactive({
   register: false,
   otp: false,
+  identityConfirmation:false
 });
 // registration process
 const handleRegistration = (data:Register) =>{
@@ -106,6 +109,18 @@ const handleRegistration = (data:Register) =>{
    barDetails.register = true;
    current.value = "otp";
 };
+function handleGoBack(data:string){
+  if(data == 'otp'){
+    barDetails.register = false;
+    current.value = "register";
+  }
+}
+function handleOtpVerified(data:boolean){
+  if(data){
+    barDetails.otp = true;
+    current.value = "identity";
+  }
+}
 // life cycle hooks
 onMounted(() => {
   const intervalId = setInterval(leftScroll, 5000); // Change image every 5000 milliseconds (5 seconds)
