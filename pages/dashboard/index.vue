@@ -64,6 +64,9 @@ import Card2 from "@/assets/svg/card2.svg";
 import Card3 from "@/assets/svg/card3.svg";
 import Card4 from "@/assets/svg/card4.svg";
 import { Bar, Doughnut } from 'vue-chartjs';
+
+
+
 const store = useGlobalStore();
 const cardsList = reactive([
   {
