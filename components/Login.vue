@@ -27,6 +27,7 @@
 
       <button
         @click.prevent="loginForm"
+        class="main_auth_button"
       >
         Log into your account
       </button>

@@ -16,12 +16,9 @@
 
 <script setup >
 import { useGlobalStore } from "@/store/global";
-import Sidenav from "@/layouts/Sidenav/index.vue";
-import Navbar from "@/layouts/Navbar/index.vue";
-components:{
-  Sidenav,
-  Navbar
-}
+import Sidenav from "@/layouts/Sidenav";
+import Navbar from "@/layouts/Navbar";
+
 const store = useGlobalStore();
 
 </script>

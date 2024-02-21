@@ -44,6 +44,7 @@
          {{" "}} of Remcash.</p>
      </div>
      <button
+     class="main_auth_button"
      >
        Confirm and proceed
      </button>

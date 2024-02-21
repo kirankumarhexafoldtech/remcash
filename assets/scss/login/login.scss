@@ -116,7 +116,7 @@
     &_input {
       @include mnInput();
     }
-    button {
+    &_button {
       width: 100%;
       background-color: var(--color-dark-m);
       color: var(--color-white);
