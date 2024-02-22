@@ -13,13 +13,34 @@
         align-items: left;
         flex-direction: row;
         padding: 10rem;
+        @include respond(mobile){
+          display: flex;
+          justify-content: space-between;
+          align-items: left;
+          height: 100px;
+          padding: 5rem;
+          
+        }
   
         .notification-header-text {
           display: flex;
           flex-direction: column;
           row-gap: 20px;
+          @include respond(mobile){
+               display: flex;
+               flex-direction: column;
+               row-gap: 5px;
+               padding-left: 0;
+              
+          }
           h1 {
             font-size: 3.7rem;
+            @include respond(mobile){
+              font-size: 12px;
+              
+              
+            
+            }
   
             span{
               font-size: 17px;
@@ -29,17 +50,36 @@
               font-weight: 300;
               color: white;
               border-radius: 40px;
+              @include respond(mobile){
+                     font-size: .0px;
+                    
+
+
+              }
             }
           }
           p {
             font-size: 18px;
+            @include respond(mobile){
+              font-size: 7px;
+              
+            }
           }
+
+
+      
         }
         .notification-header-serch-input {
   
           .ri-search-line{
           
               font-size: 20px;
+              @include respond(mobile){
+                font-size: 10px;
+                
+                
+              }
+              
           }
   
           input {
@@ -52,6 +92,13 @@
             border: none;
             background-color: rgba(128, 128, 128, 0.253);
             margin-left: 30px;
+            @include respond(mobile){
+                   font-size: 7px;
+                   outline: none;
+                   height: 10px;
+                   width: 70px;
+                   margin-left: 3px;
+            }
             
           }
         }
@@ -73,17 +120,34 @@
         width: 84%;
         // border-collapse: collapse;
         margin-left: 10rem;
+        @include respond(mobile){
+               position: absolute;
+               left: 20%;
+               top: -1%;
+        }
+
+      
   
         tr {
           .td-info {
             padding: 19px 8px;
             border-bottom: solid 1px #ddd;
             font-size: 18px;
+            @include respond(mobile){
+              padding: 9px 4px;
+              font-size: 8px;
+            }
   img{
       height: 30px;
       object-fit: contain;
       object-position: center;
   border-radius: 40px;
+  @include respond(mobile){
+    height: 10px;
+    object-fit: contain;
+    object-position: centre;
+
+  }
   }
   
         
@@ -94,6 +158,10 @@
                   font-size: 20px;
                   border-radius: 40px;
                   padding: 10px;
+                  @include respond(mobile){
+                    font-size: 7px;
+                    padding: 2px;
+                  }
               }
   
               .ri-chat-upload-line{
@@ -102,6 +170,10 @@
                   font-size: 20px;
                   border-radius: 40px;
                   padding: 10px;
+                  @include respond(mobile){
+                    font-size: 7px;
+                    padding: 2px;
+                  }
               }
           
   
@@ -111,6 +183,10 @@
                   font-size: 20px;
                   border-radius: 40px;
                   padding: 10px;
+                  @include respond(mobile){
+                    font-size: 7px;
+                    padding: 2px;
+                  }
               }
             }
           }
@@ -119,12 +195,19 @@
             font-size: 14px;
             //    padding-left: 30px;
             border-bottom: solid 1px #ddd;
+            @include respond(mobile){
+              font-size: 7px;
+            }
   
             span{
               .ri-circle-fill{
                   color: rgb(10, 224, 10);
                   font-size: 17px;
                   margin-left: 20PX;
+                  @include respond(mobile){
+                    font-size: 7px;
+                   
+                  }
               }
             }
           }
