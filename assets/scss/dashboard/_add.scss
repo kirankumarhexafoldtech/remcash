@@ -10,18 +10,49 @@
      align-items: left;
       flex-direction: row;
       padding: 10rem;
+      @include respond(mobile){
+      
+        align-items: left;
+        height: 100px;
+        padding: 7rem;
+        
+      }
 
       .content-header-text {
 
         display: flex;
           flex-direction: column;
           row-gap: 20px;
+          @include respond(mobile){
+           
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+            
+            
+          
+          }
 
         h1 {
           font-size: 3.7rem;
+
+          @include respond(mobile){
+            font-size: 1.6rem;
+            text-align: center;
+            
+            
+          
+          }
         }
         p {
             font-size: 18px;
+            @include respond(mobile){
+              font-size: 10px;
+              text-align: center;
+              
+              
+            
+            }
           }
       }
     }
@@ -34,6 +65,18 @@
         justify-content: center;
 padding: 20rem;
 row-gap: 4rem;
+
+@include respond(mobile){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+padding: 20rem;
+row-gap: 3rem;
+  
+  
+
+}
         .bnk-details{
 h3{
 
@@ -45,15 +88,35 @@ padding: 22px;
 border-radius: 10px;
     font-size: 17px;
     font-weight: 600;
-    
+
+    @include respond(mobile){
+ height: 50px;
+width: 250px;
+text-align: center;
+padding-top: 15px;
+padding-left: 10px;
+border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+  
+
+}
 
     .ri-bank-fill{
         margin-right: 20px;
         font-size: 26px;
+        @include respond(mobile){
+          font-size: 14px;
+          margin-right: 7px;
+          
+        }
     }
 
     .ri-arrow-right-s-line{
         margin-left: 10rem;
+        @include respond(mobile){
+          margin-left: 30px;
+        }
     }
 }
           
@@ -71,14 +134,34 @@ border-radius: 10px;
                 border-radius: 10px;
                     font-size: 17px;
                     font-weight: 600;
+                    @include respond(mobile){
+                      height: 50px;
+                     width: 250px;
+                     text-align: center;
+                     padding-top: 15px;
+                     padding-left: 10px;
+                     border-radius: 10px;
+                         font-size: 11px;
+                         font-weight: 600;
+                       
+                     
+                     }
 
                     .ri-bank-card-fill{
                         margin-right: 20px;
                         font-size: 26px;
+                        @include respond(mobile){
+                          font-size: 14px;
+                          margin-right: 7px;
+                          
+                        }
                     }
 
                     .ri-arrow-right-s-line{
                         margin-left: 18rem;
+                        @include respond(mobile){
+                          margin-left: 80px;
+                        }
                     }
             }
         }
