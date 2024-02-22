@@ -35,17 +35,15 @@
 
 .register{
     &-bar-container{
-        width: 100%;
-        position: fixed;
+        position: absolute;
         top: 0;
-        height: 7%;
+        height: 70px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         z-index: 10;
         left: 0;
         align-items: center;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     }
     &-bar{
         // margin: 30px auto 0 auto;
