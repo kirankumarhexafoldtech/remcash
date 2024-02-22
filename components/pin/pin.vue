@@ -20,27 +20,24 @@ const pinProps = defineProps({
 const container = ref()
 const pinArray = ref(['']);
 const pinEmit = defineEmits(['pin','error'])
-function handleEnter(e, i){
+function handleEnter(e:any, i:number){
     const children = container.value.children;
     const keyPressed = e.key;
     pinEmit('error',false)
     if(i>=0 && (keyPressed == 'Backspace' || keyPressed == 'Delete')){
-        pinArray.value[i] = null;
+        pinArray.value[i] = '';
         if(i != 0){
             children[i-1].focus();
             setTimeout(()=>{
             },100)
         }
     }else{
-        const matched = keyPressed.match(/^[0-9]$/);
-        if(pinArray.value[i] == ''){
-            return
-        }
-        if(!matched){
-            pinArray.value[i] = '';
+        // const matched = keyPressed.match(/^[0-9]$/);
+        if(pinArray.value[i] == '' || pinArray.value[i] == 'undefined'){
             return
         }else if( i < pinProps.length-1){
             children[i+1].focus();
+            console.log(pinArray.value [i])
             setTimeout(() => {
                 }, 100);
         }else{
