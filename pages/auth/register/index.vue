@@ -22,7 +22,7 @@
           <div class="register-bar">
             <div :class="barDetails.register ?  'register-bar-point register-bar-point-active' : current == 'register' ? 'register-bar-point register-bar-point-blink' : 'register-bar-point'"></div>
             <div :class="barDetails.otp ?  'register-bar-point register-bar-point-active' : current == 'otp' ? 'register-bar-point register-bar-point-blink' : 'register-bar-point'"></div>
-            <div class="register-bar-point" :class="barDetails.identityConfirmation ?  'register-bar-point register-bar-point-active' : current == 'identityConfirmation' ? 'register-bar-point register-bar-point-blink' : 'register-bar-point'"></div>
+            <div  :class="barDetails.identityConfirmation ?  'register-bar-point register-bar-point-active' : current == 'identity' ? 'register-bar-point register-bar-point-blink' : 'register-bar-point'"></div>
             <div class="register-bar-point"></div>
             <div class="register-bar-point"></div>
           </div>
