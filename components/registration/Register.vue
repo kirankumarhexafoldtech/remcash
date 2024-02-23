@@ -24,7 +24,7 @@
           {{ " " }} of Remcash.
         </p>
       </div>
-      <button class="main_auth_button">
+      <button class="main_auth_button register-button-position">
         Confirm and proceed
       </button>
     </form>

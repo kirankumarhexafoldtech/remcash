@@ -12,17 +12,22 @@
                 @click="handleSelectingIdentity(n.content)"
                 ><span><i :class="n.img"></i></span> {{n.content}}</p>
             </div>
-            <button class="main_auth_button">Proceed with {{selectedId}}</button>
+            <button class="main_auth_button identity-section-button-position" @click="currentSection = 2">Proceed with {{selectedId}}</button>
         </div>
-        <div v-if="currentSection == 2">
-            <div>
-                <p>Scan face first as shown below  to submit your 
-                    personal details for verification.</p>
-            </div>
+        <div v-if="currentSection == 2" class="identity-selected">
+                <p>Please scan the {{ selectedId }}, as demonstrated below, to submit your personal details for verification.</p>
             <img :src="identityContent.img" alt="">
-            <button><span><i class="ri-qr-scan-2-line"></i></span>Scan ID</button>
-            <button><span><i class="ri-file-upload-line"></i></span>Upload ID</button>
+            <p>Please upload/scan {{ identityContent.upload.selected == 1 ? 'front' : 'back' }} side of {{ selectedId }}:</p>
+            <div>
+                <div>Front side of {{selectedId}}</div>
+            </div>
+            <div class="identity-selected-buttons-postion">
+                <button class="main_auth_button identity-selected-button" ><span><i class="ri-qr-scan-2-line"></i></span>Scan ID<span></span></button>
+                <button class="main_auth_button identity-selected-button" @click="handleUploadDoc"><span><i class="ri-file-upload-line" id="uploadDoc"></i></span>Upload ID<span></span></button>
+            </div>
+            <p class="goback identity-select-different-id" @click="handleSelectDifferentId"><i class="ri-arrow-left-s-fill"></i>Select different ID</p>
         </div>
+        <p class="goback identity-go-back" @click="handleGoBack" v-if="currentSection == 1"><i class="ri-arrow-left-s-fill"></i>Go back</p>
         <!-- <div id="camera">
             <button @click="startCamera">Start Camera</button>
             <video ref="video" autoplay>k</video>
@@ -30,18 +35,20 @@
     </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import IdentityCard from "@/assets/svg/example_id.svg";
 
-
+const identityEmit = defineEmits(['goback']);
+const router = useRouter()
 const video = ref();
 
 const selectedId = ref("National ID");
 const currentSection = ref(1);
+const identityConfirmation = ref(false);
 
 const identityContent = reactive({
     hedding:"Identity Confirmation",
-    description:"Please provide a copy of your National ID.",
+    description:`Please provide a copy of your ${selectedId.value}.`,
     img: IdentityCard,
     ids:[
         {
@@ -54,15 +61,49 @@ const identityContent = reactive({
             img:"ri-pass-valid-line",
             content:"Driving liscence"
         }
-    ]
+    ],
+    upload:{
+        doc:[],
+        selected:1
+    }
 
 });
-
 // selecting identity card
-function handleSelectingIdentity(data:string){
+function handleSelectingIdentity(data){
     selectedId.value = data;
-}
+    identityContent.description = `Please provide a copy of your ${selectedId.value}.`
+};
+// sekecting different id
+function handleSelectDifferentId(){
+    console.log("clecked")
+    currentSection.value = 1;
+};
+// uploading the document
+function handleUploadDoc(){
+ 
+      const fileInput = document.createElement('input');
+      fileInput.type = 'file';
+      fileInput.accept = 'image/*';
+      fileInput.style.display = 'none';      
+      fileInput.addEventListener('change', function(event) {
+      const input = event.target;
+      const file = input.files[0];
 
+        if (file) {
+            console.log(file)
+          const reader = new FileReader();
+
+        //   reader.onload = function(e) {
+        //     const previewImage = document.getElementById('previewImage');
+        //     previewImage.src = e.target.result;
+        //     previewImage.style.display = 'block'; // Show the preview image
+        //   };
+        //   reader.readAsDataURL(file);
+        }
+      });
+      // Trigger a click on the dynamically created file input
+      fileInput.click();
+}
 async function startCamera() {
     try {
         const stream = await navigator.mediaDevices.getUserMedia({ video: true });
@@ -79,6 +120,18 @@ async function startCamera() {
         console.error('Error accessing camera:', error);
     }
 };
+
+function handleGoBack(){
+    console.log("clicked")
+    if(!identityConfirmation.value){
+        router.push("/auth/register");
+        identityEmit('goback',"register")
+    }
+}
+
+onBeforeUnmount(()=>{
+    handleGoBack();
+})
 
 function stopCamera() {
       // Check if the camera stream is available before stopping it

@@ -19,7 +19,7 @@
           {{ `${timer.minutes} : ${timer.seconds < 10 ? '0' : ''}${timer.seconds}` }}
         </p>
     </div >
-       <p class="register-otp-back" @click="handleGoBack"><i class="ri-arrow-left-s-fill"></i>Go back</p>
+       <p class="register-otp-back goback" @click="handleGoBack"><i class="ri-arrow-left-s-fill"></i>Go back</p>
     </div>
 </template>
 

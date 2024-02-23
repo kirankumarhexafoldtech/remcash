@@ -10,7 +10,7 @@
         max-height: 35px ;
         background-color: white;
         @include mnInput;
-        margin: 8px 0 0px 10px;
+        margin: 5px 0 0px 10px;
         cursor: pointer;
         i{
             width: 37px;
@@ -75,6 +75,9 @@
     }
     &-bar-point-active{
         background-color: green;
+    }
+    &-button-position{
+        margin-top: 30px;
     }
 }
 

@@ -33,7 +33,9 @@
         </div>
         <Register @registerDetails="handleRegistration" v-if="current == 'register'" :data="registrationProcess.register"/>
         <OtpVerification v-if="current == 'otp'" @goback="handleGoBack" @otpverified="handleOtpVerified"/>
-        <IdentityConfirmation v-if="current == 'identity'"/>
+        <IdentityConfirmation v-if="current == 'identity'"
+        @goback="handleGoBack"
+        />
       </div>
       <div class="main_auth_background">
         <img :src="BackgroundImage" alt="" />
@@ -86,6 +88,8 @@ const leftScroll = () => {
 const handleRegisterView = (data: boolean) => {
   //    showForm.value = "register"
 };
+// select different id
+
 interface Register {
   first_name:string,
   last_name:string,
@@ -116,10 +120,10 @@ const handleRegistration = (data:Register) =>{
    sessionStorage.setItem("r_data",sessionData);
 };
 function handleGoBack(data:string){
-  if(data == 'otp'){
-    barDetails.register = false;
-    current.value = "register";
-  }
+  barDetails.otp = false;
+  barDetails.register = false;
+  barDetails.identityConfirmation = false;
+  current.value = "register";
 }
 function handleOtpVerified(data:boolean){
   if(data){

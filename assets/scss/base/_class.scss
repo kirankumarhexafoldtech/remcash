@@ -19,4 +19,10 @@
             }
         }
     }
+};
+.goback{
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--color-blue-3);
+    width: max-content;
 }
