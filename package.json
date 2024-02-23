@@ -24,6 +24,7 @@
     "remixicon": "^4.1.0",
     "sass": "^1.71.0",
     "sass-loader": "^14.1.0",
-    "vue-chartjs": "^5.3.0"
+    "vue-chartjs": "^5.3.0",
+    "webcam-easy": "^1.1.1"
   }
 }

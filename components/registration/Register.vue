@@ -62,12 +62,15 @@ const userCred = ref({
 const registerForm = () => {
   emit('registerDetails', userCred.value)
 };
+watch(registerProps,()=>{
+})
+
 onMounted(() => {
   if(registerProps.data){
     userCred.value.first_name = registerProps.data.first_name;
     userCred.value.last_name = registerProps.data.last_name;
     userCred.value.phone = registerProps.data.phone;
     userCred.value.email = registerProps.data.email;
-  }
-})
+  };
+});
 </script>

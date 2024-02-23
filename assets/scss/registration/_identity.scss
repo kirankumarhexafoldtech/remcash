@@ -1,0 +1,39 @@
+.identity{
+    margin: 20px auto;
+    min-height: 700px;
+    padding: 7px;
+    &-heading{
+        margin: 20px 0;
+    }
+    &-description{
+
+    }
+    &-section{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    &-scan-details{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &-available-ids{
+        p{
+            // border: 1px solid black;
+            margin: 12px 15px 12px 0;
+            border-radius: 8px;
+            box-shadow: 0px 9px 26px 0px rgba(201, 221, 236, 0.7);
+            background-color: white;
+            padding: 10px 0;
+            cursor: pointer;
+            span{
+                padding: 0 25px
+            }
+        }
+    };
+    &-available-ids-active{
+        border:2px solid var(--color-blue-3) !important;
+    }
+}

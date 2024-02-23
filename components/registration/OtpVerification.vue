@@ -24,10 +24,14 @@
 </template>
 
 <script setup lang="ts">
+import { useRouter } from "vue-router";
 import Pin from "@/components/pin/pin.vue";
+
+const router = useRouter();
 
 const error = ref(false);
 const resend = ref(false);
+const otpVerified = ref(false);
 
 const timer = reactive({
   minutes:2,
@@ -83,9 +87,12 @@ function clearPinError(data:boolean){
     error.value = false;
 };
 function handleGoBack(){
+
     otpEmit('goback','otp')
 }
+
 onUnmounted(() => {
       clearInterval(timerId);
+      router.push("/auth/register");
 });
 </script>

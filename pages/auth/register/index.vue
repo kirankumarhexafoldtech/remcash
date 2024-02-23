@@ -73,7 +73,7 @@ const leftScrollContent = reactive([
   },
 ]);
 // current bar value
-const current = ref("register");
+const current = ref("");
 // carosel conttent reference variable
 const leftScrollContentPosition = ref(0);
 // carousel content method
@@ -105,11 +105,15 @@ const barDetails = reactive({
   otp: false,
   identityConfirmation:false
 });
+
+let intervalId:any;
 // registration process
 const handleRegistration = (data:Register) =>{
    registrationProcess.register = data;
    barDetails.register = true;
    current.value = "otp";
+   const sessionData = JSON.stringify(registrationProcess)
+   sessionStorage.setItem("r_data",sessionData);
 };
 function handleGoBack(data:string){
   if(data == 'otp'){
@@ -124,12 +128,20 @@ function handleOtpVerified(data:boolean){
   }
 }
 // life cycle hooks
-onMounted(() => {
-  const intervalId = setInterval(leftScroll, 5000); // Change image every 5000 milliseconds (5 seconds)
+onMounted(async() => {
+  const storedData = sessionStorage.getItem("r_data");
+  if(storedData){
+    const unPackData =await JSON.parse(storedData);
+    registrationProcess.register = unPackData.register;
+    console.log("registration process register",registrationProcess.register)
+  };
+  // set current value to register
+  current.value = "register";
+  intervalId = setInterval(leftScroll, 5000); // Change image every 5000 milliseconds (5 seconds)
   // Clear the interval when the component is unmounted
-  onBeforeUnmount(() => {
-    clearInterval(intervalId);
-  });
+});
+onBeforeUnmount(() => {
+  clearInterval(intervalId);
 });
 definePageMeta({
   layout: false
