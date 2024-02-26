@@ -1,0 +1,133 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.add-bank-account {
+  .bank-account-content {
+    .bank-account-header-container {
+      background-color: white;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: left;
+      flex-direction: row;
+      padding: 10rem;
+
+      .bank-account-header-text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        h1 {
+          font-size: 3.5rem;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+
+      .bank-account-header-selectInput {
+        .ri-bank-fill {
+          position: absolute;
+          padding: 20px;
+          margin-left: 10px;
+          font-size: 25px;
+          color: #0047e1;
+        }
+
+        input {
+          height: 50px;
+          width: 350px;
+          border-radius: 10px;
+          border-color: #0047e1;
+          outline: #0047e1;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          font-size: 16px;
+          padding: 30px;
+          text-align: center;
+
+          &::placeholder {
+            font-weight: 600;
+            color: black;
+          }
+        }
+      }
+    }
+
+    .bank-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 11rem;
+      row-gap: 1rem;
+
+      label {
+        font-size: 14px;
+
+        select {
+          font-size: 16px;
+          outline: none;
+          border-radius: 10px;
+          padding: 10px;
+          height: 65px;
+          width: 480px;
+          border: none;
+          background-color: white;
+        }
+
+        input {
+          font-size: 16px;
+          outline: none;
+          border-radius: 10px;
+          padding: 10px;
+          height: 65px;
+          width: 480px;
+          border: none;
+
+          &::placeholder {
+            font-weight: 600;
+            color: black;
+          }
+        }
+      }
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      column-gap: 2rem;
+
+      .cancel-btn {
+        background-color: #000000ba;
+        height: 65px;
+        width: 300px;
+        border: none;
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 10px;
+        font-weight: 700;
+      }
+
+      .add-btn {
+        background-color: #000000ba;
+        height: 65px;
+        width: 390px;
+        border: none;
+        color: white;
+
+        font-size: 18px;
+        border-radius: 10px;
+        font-weight: 700;
+
+        .ri-arrow-right-s-line {
+          margin-left: 10rem;
+        }
+      }
+    }
+  }
+}
