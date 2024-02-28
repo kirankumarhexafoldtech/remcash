@@ -1,0 +1,255 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.add-bank-account{
+
+  .bank-account-content{
+
+      .bank-account-header-container{
+
+          background-color: white;
+
+          display: flex;
+          justify-content: space-between;
+          align-items: left;
+          flex-direction: row;
+          padding: 10rem;
+          @include respond(mobile){
+    
+              align-items: left;
+              height: 100px;
+              padding: 7rem;
+              
+            }
+         
+
+          .bank-account-header-text{
+              display: flex;
+              flex-direction: column;
+              row-gap: 20px;
+              @include respond(mobile){
+         
+                  display: flex;
+                  flex-direction: column;
+                  row-gap: 10px;
+                      
+                      
+                    
+                    }
+              h1 {
+                  font-size: 3.5rem;
+                  @include respond(mobile){
+                      font-size: 7px;
+                  }
+                    
+                  }
+
+                  p {
+                      font-size: 18px;
+                      @include respond(mobile){
+                          font-size: 5px;
+                      }
+                  
+                    }
+          
+            
+      }
+
+      .bank-account-header-selectInput{
+
+          
+          .ri-bank-fill{
+              position: absolute; 
+              padding: 20px;
+              margin-left: 10px;
+              font-size: 25px;
+              color: #0047e1;
+              @include respond(mobile){
+                  position: absolute;
+                  padding: 10px;
+                  font-size: 7px;
+                  margin-left: 15px;
+
+              }
+          }
+
+
+           
+
+          
+          input{
+              height: 50px;
+              width: 350px;
+              border-radius: 10px;
+              border-color: #0047e1;
+              outline: #0047e1;
+           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+           font-size: 16px;
+           padding: 30px;
+           text-align: center;
+           @include respond(mobile){
+              font-size: 5px;
+              height: 25px;
+              width: 100px;
+              margin-left: 20px;
+              padding: 0;
+       }
+
+           &::placeholder {
+              font-weight: 600;
+              color: black;
+              @include respond(mobile){
+                  color: black;
+              }
+              }   
+
+           
+               
+              
+          }
+
+         
+      }
+  }
+  
+  .bank-details{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+padding: 11rem;
+row-gap: 1rem;
+@include respond(mobile){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem;
+  
+}
+
+label{
+  font-size: 14px;
+  @include respond(mobile){
+    font-size: 8px;
+  }
+
+  select{
+      font-size: 16px;
+      outline: none;
+      border-radius: 10px;
+      padding: 10px;
+      height: 65px;
+      width: 480px;
+      border: none;
+      background-color: white;
+      @include respond(mobile){
+        font-size: 10px;
+        outline: none;
+        border-radius: 5px;
+        padding: 5px;
+        height: 35px;
+        width: 200px;
+        border: none;
+      background-color: white;
+      }
+
+      
+
+  }
+
+  input {
+      font-size: 16px;
+      outline: none;
+      border-radius: 10px;
+      padding: 10px;
+      height: 65px;
+      width: 480px;
+      border: none;
+      @include respond(mobile){
+        font-size: 10px;
+        outline: none;
+        border-radius: 5px;
+        padding: 5px;
+        height: 35px;
+        width: 200px;
+        border: none;
+      }
+      
+      &::placeholder {
+      font-weight: 600;
+      color: black;
+      }      
+
+  }
+
+   
+   
+
+}
+
+
+  
+}
+
+.button-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 2rem;
+  @include respond(mobile){
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1rem;
+  }
+
+.cancel-btn{
+  background-color: #000000ba;
+  height: 65px;
+  width: 300px;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  @include respond(mobile){
+    height: 30px;
+    width: 150px;
+    font-size: 9px;
+    text-align: center;
+  }
+}
+
+.add-btn{
+   background-color: #000000ba;
+  height: 65px;
+  width: 390px;
+  border: none;
+  color: white;
+  
+  font-size: 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  @include respond(mobile){
+    height: 30px;
+    width: 190px;
+    font-size: 9px;
+text-align: center;
+  }
+
+  .ri-arrow-right-s-line{
+      margin-left: 10rem;
+      margin-left: 5rem;
+  }
+}
+
+}
+  }
+
+  }
+
+
