@@ -14,31 +14,37 @@
       <div class="Details-container">
         <table>
             <tr>
-              <td class="bank-name">Ecobank <span><img :src="Ecobank" alt="image"></span></td>
+              <td class="bank-name">{{ bankName }} <span><img :src="bankIcon" alt="image"></span></td>
             </tr>
   
             <tr>
-              <td class="acc-nbr">Account number <span>GH 8976 2231 0000 2110 0001</span></td>
+              <td class="acc-nbr">Account number <span>{{ accountNumber }}</span></td>
             </tr>
   
             <tr>
-              <td class="acc-owner">Account owner <span>Samuel Mudor</span></td>
+              <td class="acc-owner">Account owner <span>{{ accountOwner }}</span></td>
             </tr>
   
          
           </table>
           <div class="button-container">
-        <button class="ok-btn">OK</button>
-        <button class="add-btn">Add another account <span><i class="ri-arrow-right-s-line"></i></span>
-        </button>
-        </div>
+            <button class="ok-btn">OK</button>
+            <button class="add-btn">Add another account <span><i class="ri-arrow-right-s-line"></i></span>
+            </button>
+          </div>
         </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import addedBank from "@/assets/svg/added_bank.svg";
 import QIcon from "@/assets/svg/Q_icon.svg";
 import Ecobank from "@/assets/svg/ecobank.svg";
+
+const bankName = ref("Ecobank");
+const bankIcon = ref(Ecobank);
+const accountNumber = ref("GH 8976 2231 0000 2110 0001");
+const accountOwner = ref("Samuel Mudor");
 </script>
