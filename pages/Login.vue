@@ -42,6 +42,7 @@ import PayBills from "@/assets/svg/pay_bills.svg";
 import MoneyTransfer from "@/assets/svg/instant_money_tranfer.svg";
 import Login from "@/components/Login.vue";
 import BackgroundImage from "@/assets/svg/bg_glob.svg";
+
 import RamecashLogo from "@/assets/svg/logo01.svg";
 const showForm = ref("")
 const leftScrollContent = reactive([
