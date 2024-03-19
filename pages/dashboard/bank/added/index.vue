@@ -29,7 +29,7 @@
             </table>
             <div class="button-container">
               <button class="ok-btn">OK</button>
-              <button class="add-btn">Add another account <span><i class="ri-arrow-right-s-line"></i></span>
+              <button class="add-btn" @click="handleAddAnotherAccount()">Add another account <span><i class="ri-arrow-right-s-line"></i></span>
               </button>
             </div>
           </div>
@@ -39,12 +39,21 @@
   
   <script setup>
   import { ref } from 'vue';
+  import {useRouter} from "vue-router"
   import addedBank from "@/assets/svg/added_bank.svg";
   import QIcon from "@/assets/svg/Q_icon.svg";
   import Ecobank from "@/assets/svg/ecobank.svg";
+
+  const router = useRouter();
+
+function handleAddAnotherAccount() {
+      router.push("/dashboard/accounts");
+    };
+
   
   const bankName = ref("Ecobank");
   const bankIcon = ref(Ecobank);
   const accountNumber = ref("GH 8976 2231 0000 2110 0001");
   const accountOwner = ref("Samuel Mudor");
+
   </script>

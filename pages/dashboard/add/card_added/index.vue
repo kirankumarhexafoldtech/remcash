@@ -17,7 +17,7 @@
 
 <div class="button-container">
               <button class="ok-btn">OK</button>
-              <button class="add-btn">Add another account<span><i class="ri-arrow-right-s-line"></i></span>
+              <button class="add-btn" @click="handleAddAnotherAccount()">Add another account<span><i class="ri-arrow-right-s-line"></i></span>
               </button>
             </div>
        </div>
@@ -28,5 +28,12 @@
   import bankCards from "@/assets/svg/bank_cards.svg";
   import QIcon from "@/assets/svg/Q_icon.svg";
   import card5 from "@/assets/svg/card5.svg";
+  import { useRouter } from "vue-router";
+
+  const router = useRouter();
+
+function handleAddAnotherAccount() {
+      router.push("/dashboard/accounts");
+    };
 
 </script>

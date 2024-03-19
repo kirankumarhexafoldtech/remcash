@@ -40,6 +40,10 @@ const context = reactive({
       icon: "ri-home-2-fill",
     },
     {
+      name: "Accounts",
+      icon: "ri-account-box-fill",
+    },
+    {
       name: "Notifications",
       icon: "ri-notification-3-fill",
     },

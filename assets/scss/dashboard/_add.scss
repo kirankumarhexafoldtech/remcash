@@ -7,164 +7,482 @@
   .accounts-content {
     .content-header {
       background-color: white;
-     align-items: left;
+      display: flex;
+      justify-content: space-between;
       flex-direction: row;
       padding: 10rem;
-      @include respond(mobile){
-      
+      @include respond(mobile) {
         align-items: left;
         height: 100px;
         padding: 7rem;
-        
       }
 
       .content-header-text {
-
-        display: flex;
-          flex-direction: column;
-          row-gap: 20px;
-          @include respond(mobile){
-           
         display: flex;
         flex-direction: column;
-        row-gap: 10px;
-            
-            
-          
-          }
+        row-gap: 20px;
+        @include respond(mobile) {
+          display: flex;
+          flex-direction: column;
+          row-gap: 5px;
+        }
 
         h1 {
           font-size: 3.7rem;
 
-          @include respond(mobile){
-            font-size: 1.6rem;
-            text-align: center;
-            
-            
-          
+          @include respond(mobile) {
+            font-size: 10px;
           }
         }
         p {
-            font-size: 18px;
-            @include respond(mobile){
-              font-size: 10px;
-              text-align: center;
+          font-size: 18px;
+          @include respond(mobile) {
+            font-size: 5px;
+          }
+        }
+      }
+
+      .user-options {
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+        justify-content: space-around;
+
+        column-gap: 5em;
+
+        @include respond(mobile) {
+          column-gap: 2em;
+          margin-left: 30px;
+        }
+        .bank-option {
+          h3 {
+            background-color: rgba(208, 230, 247, 0.5);
+            height: 55px;
+            width: 290px;
+            text-align: center;
+            padding: 19px;
+            border-radius: 5px;
+            font-size: 14px;
+            box-shadow: #0047e144 0px 8px 24px;
+            font-weight: 600;
+
+            @include respond(mobile) {
+            height: 10px;
+            width: 100px;
+            font-size: 5px;
+            padding: 0px;
+            }
+
+            .ri-bank-fill {
+              margin-right: 10px;
+              font-size: 14px;
+              @include respond(mobile) {
+                font-size: 8px;
               
-              
-            
+              }
+            }
+
+            .ri-arrow-right-s-line {
+              margin-left: 3rem;
+              @include respond(mobile) {
+                margin-left: 3px;
+              }
             }
           }
+        }
+
+        .card-option {
+          h3 {
+            background-color: rgba(208, 230, 247, 0.5);
+            box-shadow: #0047e144 0px 8px 24px;
+            height: 55px;
+            width: 250px;
+            text-align: center;
+            padding: 18px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            @include respond(mobile) {
+              height: 10px;
+            width: 100px;
+            font-size: 5px;
+            padding: 0px;
+            }
+
+            .ri-bank-card-fill {
+              margin-right: 10px;
+              font-size: 14px;
+              @include respond(mobile) {
+                font-size: 8px;
+                margin-right: 7px;
+              }
+            }
+
+            .ri-arrow-right-s-line {
+              margin-left: 5rem;
+              @include respond(mobile) {
+                margin-left: 8px;
+              }
+            }
+          }
+        }
       }
     }
 
-    .user-options{
-
+    .bankAndCard-Added {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      @include respond(mobile){
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-padding: 20rem;
-row-gap: 4rem;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      }
 
-@include respond(mobile){
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-padding: 20rem;
-row-gap: 3rem;
-  
-  
-
-}
-        .bnk-details{
-h3{
-
-background-color: white;
-height: 70px;
-width: 450px;
-text-align: center;
-padding: 22px;
-border-radius: 10px;
-    font-size: 17px;
-    font-weight: 600;
-
-    @include respond(mobile){
- height: 50px;
-width: 250px;
-text-align: center;
-padding-top: 15px;
-padding-left: 10px;
-border-radius: 10px;
-    font-size: 11px;
-    font-weight: 600;
-  
-
-}
-
-    .ri-bank-fill{
-        margin-right: 20px;
-        font-size: 26px;
+      .bank-Details-container {
+     
+        box-shadow: #0047e144 0px 8px 24px;
+        margin-top: 12em;
+        padding: 5em;
+        height: 550px;
+        border-radius: 10px;
         @include respond(mobile){
-          font-size: 14px;
-          margin-right: 7px;
+          margin-top: 5em;
+          height: 260px;
+          width: 300px;
+          padding: 3em;
           
+        border-radius: 5px;
         }
-    }
+        .bank-details {
+          display: flex;
+          flex-direction: column;
 
-    .ri-arrow-right-s-line{
-        margin-left: 10rem;
-        @include respond(mobile){
-          margin-left: 30px;
-        }
-    }
-}
-          
-        }
+          row-gap: 1rem;
+          @include respond(mobile){
+            display: flex;
+            flex-direction: column;
+  
+            row-gap: 5px;
+          }
 
-        .card-details{
-
-            h3{
-
-                background-color: white;
-                height: 70px;
-                width: 450px;
-                text-align: center;
-                padding: 20px;
-                border-radius: 10px;
-                    font-size: 17px;
-                    font-weight: 600;
-                    @include respond(mobile){
-                      height: 50px;
-                     width: 250px;
-                     text-align: center;
-                     padding-top: 15px;
-                     padding-left: 10px;
-                     border-radius: 10px;
-                         font-size: 11px;
-                         font-weight: 600;
-                       
-                     
-                     }
-
-                    .ri-bank-card-fill{
-                        margin-right: 20px;
-                        font-size: 26px;
-                        @include respond(mobile){
-                          font-size: 14px;
-                          margin-right: 7px;
-                          
-                        }
-                    }
-
-                    .ri-arrow-right-s-line{
-                        margin-left: 18rem;
-                        @include respond(mobile){
-                          margin-left: 80px;
-                        }
-                    }
+          label {
+            font-size: 16px;
+            @include respond(mobile){
+               font-size: 8px;
             }
+
+            select {
+              font-size: 14px;
+              outline: none;
+              border-radius: 5px;
+              padding: 5px;
+              height: 65px;
+              width: 490px;
+              border: none;
+              background-color: white;
+              @include respond(mobile){
+                font-size: 7px;
+                height: 30px;
+                width: 200px;
+              }
+            }
+
+            input {
+              font-size: 14px;
+              outline: none;
+              border-radius: 5px;
+              padding: 10px;
+              height: 65px;
+              width: 490px;
+              border: none;
+              @include respond(mobile){
+                font-size: 7px;
+                height: 30px;
+                width: 200px;
+              }
+
+              &::placeholder {
+                font-weight: 600;
+                color: black;
+              }
+            }
+          }
+
+          .button {
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            column-gap: 18px;
+            @include respond(mobile){
+              display: flex;
+              flex-direction: row;
+              justify-content: right;
+              column-gap: 4px;
+
+            }
+
+            button {
+              background-color: #0047e1c0;
+              color: white;
+              outline: none;
+              border: none;
+              padding: 10px;
+              font-size: 14px;
+
+              font-weight: 600;
+              border-radius: 5px;
+
+              margin-top: 4em;
+              box-shadow: #0047e144 0px 8px 24px;
+              @include respond(mobile){
+                padding: 5px;
+                font-size: 7px;
+                margin-top: 2em;
+                
+              }
+            }
+          }
         }
+      }
+
+      .card-Details-container {
+        box-shadow: #0047e144 0px 8px 24px;
+        margin-top: 12em;
+        padding: 5em;
+        height: 550px;
+        border-radius: 10px;
+        @include respond(mobile){
+          margin-top: 5em;
+          height: 260px;
+          width: 300px;
+          padding: 3em;
+        border-radius: 5px;
+        }
+        .card-details {
+          .bankList-cardName {
+            display: flex;
+            flex-direction: row;
+            column-gap: 22px;
+            @include respond(mobile){
+              display: flex;
+              flex-direction: row;
+              column-gap: 10px;
+              
+              
+            }
+            label {
+              font-size: 16px;
+              @include respond(mobile){
+                font-size: 8px;
+              }
+            }
+
+            select {
+              font-size: 14px;
+              outline: none;
+              border-radius: 5px;
+              padding: 10px;
+              height: 45px;
+              width: 210px;
+              border: none;
+              background-color: white;
+              margin-top: 8px;
+              box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+              @include respond(mobile){
+                font-size: 7px;
+                padding: 5px;
+                height: 20px;
+                width: 100px;
+                margin-top: 4px;
+              }
+            }
+          }
+
+          .owner-name {
+            padding-top: 3em;
+            @include respond(mobile){
+              padding-top: 1em;
+            }
+            label {
+              font-size: 16px;
+              @include respond(mobile){
+                font-size: 8px;
+              }
+
+              input {
+                font-size: 14px;
+                outline: none;
+                border-radius: 5px;
+                padding: 15px;
+                height: 45px;
+                width: 210px;
+                border: none;
+                margin-top: 10px;
+                background-color: #c9ddec;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                @include respond(mobile){
+                  font-size: 7px;
+                  padding: 5px;
+                  height: 20px;
+                  width: 100px;
+                  margin-top: 4px;
+                }
+                
+                &::placeholder {
+                  font-weight: 600;
+                  color: black;
+                }
+              }
+            }
+          }
+
+          .user-card-details {
+            .nbr-cvv {
+              display: flex;
+              flex-direction: row;
+              column-gap: 12em;
+              padding-top: 3em;
+              @include respond(mobile){
+                display: flex;
+                flex-direction: row;
+                column-gap: 1em;
+                padding-top: 1em;
+              }
+
+              label {
+                font-size: 16px;
+                @include respond(mobile){
+                  font-size: 8px;
+                }
+                #card-number {
+                  font-size: 14px;
+                  outline: none;
+                  border-radius: 5px;
+                  padding: 5px;
+                  height: 45px;
+                  width: 210px;
+                  border: none;
+                  margin-top: 5px;
+                  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                  @include respond(mobile){
+                    font-size: 7px;
+                    height: 20px;
+                    width: 100px;
+                  }
+
+                  &::placeholder {
+                    font-weight: 600;
+                    color: black;
+                    padding-left: 15px;
+                    @include respond(mobile){
+                      padding-left: 5px;
+                    }
+                  }
+                }
+
+                #cvv-nbr {
+                  font-size: 14px;
+                  outline: none;
+                  border-radius: 5px;
+                  padding: 5px;
+                  height: 45px;
+                  width: 180px;
+                  border: none;
+                  margin-top: 5px;
+                  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                  @include respond(mobile){
+                    font-size: 7px;
+                    height: 20px;
+                    width: 100px;
+                  }
+
+                  &::placeholder {
+                    font-weight: 600;
+                    color: black;
+                    padding-left: 15px;
+                  }
+                }
+              }
+            }
+
+            .expiry-date {
+              padding-top: 3em;
+
+              @include respond(mobile){
+                padding-top: 1em;
+              }
+
+              label {
+                font-size: 16px;
+                @include respond(mobile){
+                  font-size: 8px;
+                }
+
+                #card-expiry {
+                  font-size: 14px;
+                  outline: none;
+                  border-radius: 5px;
+                  padding: 5px;
+                  height: 45px;
+                  width: 210px;
+                  border: none;
+                  margin-top: 5px;
+                  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                  @include respond(mobile){
+                    font-size: 7px;
+                    height: 20px;
+                    width: 100px;
+                  }
+
+                  &::placeholder {
+                    font-weight: 600;
+                    color: black;
+                    padding-left: 15px;
+                  }
+                }
+              }
+            }
+          }
+
+          .button-2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            column-gap: 18px;
+            @include respond(mobile){
+              display: flex;
+              flex-direction: row;
+              justify-content: right;
+              column-gap: 4px;
+
+            }
+
+            button {
+              background-color: #0047e1c0;
+              color: white;
+              outline: none;
+              border: none;
+              padding: 10px;
+              font-size: 14px;
+
+              font-weight: 600;
+              border-radius: 5px;
+
+              margin-top: 2em;
+              box-shadow: #0047e144 0px 8px 24px;
+              @include respond(mobile){
+                padding: 5px;
+                font-size: 7px;
+                margin-top: 1em;
+                
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
