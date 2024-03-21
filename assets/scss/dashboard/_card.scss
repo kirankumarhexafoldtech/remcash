@@ -78,12 +78,14 @@
                  font-size: 16px;
                  padding: 30px;
                  text-align: center;
+                 cursor: pointer;
                  @include respond(mobile){
                     font-size: 5px;
                     height: 25px;
                     width: 100px;
                     margin-left: 20px;
                     padding: 0;
+                    cursor: pointer;
              }
     
                  &::placeholder {
@@ -326,11 +328,13 @@ padding-left: 26rem;
         font-size: 18px;
         border-radius: 10px;
         font-weight: 700;
+        cursor: pointer;
         @include respond(mobile){
             height: 30px;
             width: 150px;
             font-size: 9px;
             text-align: center;
+            cursor: pointer;
           }
     }
 
@@ -340,7 +344,7 @@ padding-left: 26rem;
        width: 390px;
        border: none;
        color: white;
-       
+       cursor: pointer;
        font-size: 18px;
        border-radius: 10px;
        font-weight: 700;
@@ -349,6 +353,7 @@ padding-left: 26rem;
         width: 190px;
         font-size: 9px;
     text-align: center;
+    cursor: pointer;
       }
 
        .ri-arrow-right-s-line{

@@ -9,10 +9,10 @@
     </div>
     <div class="user-options"> 
         <div class="bank-option">
-            <h3 > <span><i class="ri-bank-fill"></i></span > Add your bank accounts <span><i class="ri-arrow-right-s-line" @click="handleUserBankAccount"></i></span></h3>
+            <h3 @click="handleUserBankAccount"> <span><i class="ri-bank-fill"></i></span > Add your bank accounts <span><i class="ri-arrow-right-s-line" ></i></span></h3>
         </div>
         <div class="card-option">
-            <h3><span><i class="ri-bank-card-fill"></i></span> Add your cards <span><i class="ri-arrow-right-s-line" @click="handleUserCards"></i></span></h3>
+            <h3 @click="handleUserCards"><span><i class="ri-bank-card-fill"></i></span> Add your cards <span><i class="ri-arrow-right-s-line" ></i></span></h3>
         </div>
         
     </div>
@@ -41,8 +41,9 @@
               <input placeholder="Ex: GH 8976 2231 0000 2110 0001" />
             </label>
             <div class="button">
+              <button @click="handleAddbutton()">Add</button>
               <button>Cancel</button>
-              <button @click="handleAddedBankAccounts()">added-bank-accounts</button>
+              <button @click="handleAddedBankAccounts()">View-added-bank-accounts</button>
             </div>
           </div>
         </div>
@@ -94,8 +95,9 @@
             
         </div>
         <div class="button-2">
+          <button @click="handleAddbutton_2()">Add</button>
               <button>Cancel</button>
-              <button @click="handleAddedCards()">added-cards</button>
+              <button @click="handleAddedCards()">View-added-cards</button>
             </div>
           </div>
         </div>
@@ -130,6 +132,14 @@ function handleAddedBankAccounts() {
 
     function handleAddedCards() {
       router.push("/dashboard/list/allCards");
+    };
+
+    function handleAddbutton() {
+      router.push("/dashboard/bank/added");
+    };
+
+    function handleAddbutton_2() {
+      router.push("/dashboard/add/card_added");
     };
 
 const bankName = ref("Ecobank");
