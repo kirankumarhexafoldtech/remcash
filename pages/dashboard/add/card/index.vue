@@ -12,7 +12,7 @@
         </div>
        
           </div>  
-          <div class="bank-details">
+          <div class="card-details-container">
             <div class="bankList-cardName">
         <label
           >Choose issuing bank from the list <br />
@@ -52,7 +52,7 @@
      </div>
      <div class="button-container">
               <button class="cancel-btn">Cancel</button>
-              <button class="add-btn">Add new card<span><i class="ri-arrow-right-s-line"></i></span>
+              <button class="add-btn" @click="handleAddNewCard">Add new card<span><i class="ri-arrow-right-s-line"></i></span>
               </button>
             </div>
       </div>
@@ -63,5 +63,12 @@
 
 
 <script setup>
+import {useRouter} from "vue-router"
+
+const router = useRouter();
+
+function handleAddNewCard() {
+      router.push("/dashboard/add/card_added");
+    };
 
 </script>

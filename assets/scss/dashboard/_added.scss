@@ -180,10 +180,12 @@
           font-size: 18px;
           border-radius: 10px;
           font-weight: 700;
+          cursor: pointer;
           @include respond(mobile) {
             height: 30px;
             width: 150px;
             font-size: 9px;
+            cursor: pointer;
             text-align: center;
           }
         }
@@ -198,11 +200,13 @@
           font-size: 18px;
           border-radius: 10px;
           font-weight: 700;
+          cursor: pointer;
           @include respond(mobile) {
             height: 30px;
             width: 190px;
             font-size: 9px;
             text-align: center;
+            cursor: pointer;
           }
   
           .ri-arrow-right-s-line {

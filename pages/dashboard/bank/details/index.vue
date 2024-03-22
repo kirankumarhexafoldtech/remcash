@@ -36,7 +36,7 @@
 
       <div class="button-container">
         <button class="cancel-btn">Cancel</button>
-        <button class="add-btn">
+        <button class="add-btn" @click="handleAddBankAccount()">
           Add bank account <span><i class="ri-arrow-right-s-line"></i></span>
         </button>
       </div>
@@ -44,4 +44,14 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+
+import {useRouter} from "vue-router"
+
+const router = useRouter();
+
+function handleAddBankAccount() {
+      router.push("/dashboard/bank/added");
+    };
+
+</script>

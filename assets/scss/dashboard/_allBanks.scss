@@ -1,0 +1,113 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  padding-top: 2em;
+
+  .added-banks {
+    .header {
+      h1 {
+        font-size: 30px;
+        font-weight: 600;
+        padding: 15px;
+        color: white;
+
+        background-color: #0047e1;
+        @include respond(mobile) {
+          font-size: 10px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  .bankList-table {
+    table {
+      margin-top: 5rem;
+      width: 100%;
+      border-collapse: collapse;
+      @include respond(mobile) {
+        margin-top: 2rem;
+      }
+
+      tr {
+        .td-info {
+          padding: 19px 10px;
+
+          border-bottom: solid 1px black;
+          font-size: 18px;
+          @include respond(mobile) {
+            padding: 9px 4px;
+            font-size: 8px;
+          }
+          img {
+            height: 30px;
+            object-fit: contain;
+            object-position: center;
+            border-radius: 40px;
+            @include respond(mobile) {
+              height: 10px;
+              object-fit: contain;
+              object-position: centre;
+            }
+          }
+
+          span {
+            .ri-arrow-left-right-line {
+              background-color: white;
+              font-size: 20px;
+              border-radius: 40px;
+              padding: 10px;
+              @include respond(mobile) {
+                font-size: 7px;
+                padding: 2px;
+              }
+            }
+
+            .ri-chat-upload-line {
+              background-color: white;
+              color: green;
+              font-size: 20px;
+              border-radius: 40px;
+              padding: 10px;
+              @include respond(mobile) {
+                font-size: 7px;
+                padding: 2px;
+              }
+            }
+
+            .ri-arrow-down-circle-fill {
+              background-color: white;
+              color: red;
+              font-size: 20px;
+              border-radius: 40px;
+              padding: 10px;
+              @include respond(mobile) {
+                font-size: 7px;
+                padding: 2px;
+              }
+            }
+          }
+        }
+
+        .td-date-time {
+          font-size: 20px;
+          margin-right: 30em;
+          border-bottom: solid 1px black;
+          @include respond(mobile) {
+            font-size: 7px;
+          }
+
+          span {
+            .ri-eye-off-fill {
+              color: #0047e1;
+              margin-right: 2em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

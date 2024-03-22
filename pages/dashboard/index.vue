@@ -10,7 +10,7 @@
       <div class="dashboard-cards">
         <div class="dashboard-cards-content">
           <h1>My accounts</h1>
-          <button> + Add account</button>
+          <button @click="handleAddAccount()"> + Add account</button>
         </div>
         <div class="dashboard-cards-listcards">
         <div v-for="item in cardsList" :key="item.card">
@@ -64,7 +64,13 @@ import Card2 from "@/assets/svg/card2.svg";
 import Card3 from "@/assets/svg/card3.svg";
 import Card4 from "@/assets/svg/card4.svg";
 import { Bar, Doughnut } from 'vue-chartjs';
+import {useRouter} from "vue-router"
 
+const router = useRouter();
+
+function handleAddAccount() {
+      router.push("/dashboard/accounts");
+    };
 
 
 const store = useGlobalStore();
