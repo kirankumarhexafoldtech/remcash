@@ -59,7 +59,7 @@
    
         <footer>
       <button>
-        +Add new<span><i class="ri-arrow-right-s-line"></i></span>
+        + Add new<span><i class="ri-arrow-right-s-line"></i></span>
       </button>
           
        
