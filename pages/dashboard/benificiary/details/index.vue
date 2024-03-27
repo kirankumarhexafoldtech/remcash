@@ -19,74 +19,73 @@
           <h2>December</h2>
         </div>
         <div class="payment-details">
-            <div class="payment-type">
-<h3>Payment for services</h3>
-            </div>
-            <div class="payment-time-container">
+          <div class="payment-type">
+            <h3>Payment for services</h3>
+          </div>
+          <div class="payment-time-container">
             <div class="date-time">
-                <p>26/08/2021 <span>10:43AM</span></p>
+              <p>26/08/2021 <span>10:43AM</span></p>
             </div>
             <div class="payment">
-                <h2>GHS 341.00</h2>
+              <h2>GHS 341.00</h2>
             </div>
-        </div>
+          </div>
         </div>
         <div class="payment-details">
-            <div class="payment-type">
-<h3>Payment for services</h3>
-            </div>
-            <div class="payment-time-container">
+          <div class="payment-type">
+            <h3>Payment for services</h3>
+          </div>
+          <div class="payment-time-container">
             <div class="date-time">
-                <p>26/08/2021 <span>10:43AM</span></p>
+              <p>26/08/2021 <span>10:43AM</span></p>
             </div>
             <div class="payment">
-                <h2>GHS 341.00</h2>
+              <h2>GHS 341.00</h2>
             </div>
-        </div>
+          </div>
         </div>
         <div class="payment-details">
-            <div class="payment-type">
-<h3>Money return</h3>
-            </div>
-            <div class="payment-time-container">
+          <div class="payment-type">
+            <h3>Money return</h3>
+          </div>
+          <div class="payment-time-container">
             <div class="date-time">
-                <p>26/08/2021 <span>10:43AM</span></p>
+              <p>26/08/2021 <span>10:43AM</span></p>
             </div>
-            <div  class="returned-payment">
-                <h2>GHS 341.00</h2>
+            <div class="returned-payment">
+              <h2>GHS 341.00</h2>
             </div>
-        </div>
+          </div>
         </div>
         <div class="months">
           <h2>November</h2>
         </div>
         <div class="payment-details">
-            <div class="payment-type">
-<h3>Payment for services</h3>
-            </div>
-            <div class="payment-time-container">
+          <div class="payment-type">
+            <h3>Payment for services</h3>
+          </div>
+          <div class="payment-time-container">
             <div class="date-time">
-                <p>26/08/2021 <span>10:43AM</span></p>
+              <p>26/08/2021 <span>10:43AM</span></p>
             </div>
             <div class="payment">
-                <h2>GHS 341.00</h2>
+              <h2>GHS 341.00</h2>
             </div>
-        </div>
+          </div>
         </div>
         <div class="payment-details">
-            <div class="payment-type">
-<h3>Payment for services</h3>
-            </div>
-            <div class="payment-time-container">
+          <div class="payment-type">
+            <h3>Payment for services</h3>
+          </div>
+          <div class="payment-time-container">
             <div class="date-time">
-                <p>26/08/2021 <span>10:43AM</span></p>
+              <p>26/08/2021 <span>10:43AM</span></p>
             </div>
             <div class="payment">
-                <h2>GHS 341.00</h2>
+              <h2>GHS 341.00</h2>
             </div>
+          </div>
         </div>
-        </div>
-      
       </div>
     </div>
 
