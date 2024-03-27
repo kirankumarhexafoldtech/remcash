@@ -22,7 +22,7 @@
             </tr>
   
             <tr>
-              <td class="td-info">
+              <td class="td-info" @click="handleBenificiaryDetails()">
                 <span><img
                 id="user-img"
                 src="@/assets/img/team-2.jpg"
@@ -75,6 +75,9 @@ import { ref } from "vue";
 
 const router = useRouter();
 
+function handleBenificiaryDetails() {
+      router.push("/dashboard/benificiary/details");
+    };
 
 
 </script>
